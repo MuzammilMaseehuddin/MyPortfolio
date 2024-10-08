@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzammil Maseehuddin Ahmed - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hidden { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 p-4 text-white">
+        <ul class="flex justify-center space-x-6">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="active p-10 text-center">
+        <img src="your-image-url.jpg" alt="Profile Picture" class="mx-auto w-32 h-32 rounded-full">
+        <h1 class="text-4xl font-bold mt-4">Muzammil Maseehuddin Ahmed</h1>
+        <p class="text-lg">Piping Designer with 1+ years of experience in the oil and gas industry</p>
+        <a href="#" class="mt-4 inline-block bg-blue-600 text-white py-2 px-6 rounded" onclick="showSection('projects')">View My Projects</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="hidden p-10">
+        <h2 class="text-3xl font-bold">About Me</h2>
+        <p>BTech in Mechanical Engineering (2023), with a Diploma in Mechanical Engineering (2020), and over 1 year of professional experience.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="hidden p-10">
+        <h2 class="text-3xl font-bold">Experience</h2>
+        <ul class="list-disc pl-5">
+            <li>Working as Piping Designer at Petrocon Engineers since Dec 2023.</li>
+            <li>Familiar with PDS, SP3D, E3D, Isometric Drawings, and Piping Layouts.</li>
+            <li>Experience with projects under ADNOC client: Archirodon Project BAB485 and Wave C3B Onshore.</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="hidden p-10">
+        <h2 class="text-3xl font-bold">Projects</h2>
+        <div>
+            <h3 class="text-xl font-semibold">Archirodon Project BAB485</h3>
+            <p>Client: ADNOC | Role: Piping Designer | Details: Isometric extraction and error resolution for a major onshore project.</p>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold">Wave C3B Onshore Project</h3>
+            <p>Client: ADNOC | Role: Piping Designer | Details: Planning and design of piping layouts for oil and gas infrastructure.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="hidden p-10">
+        <h2 class="text-3xl font-bold">Skills</h2>
+        <ul class="list-disc pl-5">
+            <li>Technical: PDS, SP3D, E3D, AutoCAD, MS Office, SmartPlant 3D</li>
+            <li>Soft Skills: Communication, Teamwork, Leadership</li>
+        </ul>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="hidden p-10">
+        <h2 class="text-3xl font-bold">Blog</h2>
+        <p>Blog posts coming soon...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="hidden p-10">
+        <h2 class="text-3xl font-bold">Contact</h2>
+        <form class="space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full p-2 border">
+            <input type="email" placeholder="Your Email" class="w-full p-2 border">
+            <textarea placeholder="Your Message" class="w-full p-2 border"></textarea>
+            <button class="bg-blue-600 text-white py-2 px-4 rounded">Send</button>
+        </form>
+        <div class="mt-4">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
