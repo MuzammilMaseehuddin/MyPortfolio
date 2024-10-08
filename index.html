@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muzammil Maseehuddin Ahmed - Portfolio</title>
+    <title>Muzammil Ahmed - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .hidden { display: none; }
         .active { display: block; }
+        .card { transition: transform 0.2s; }
+        .card:hover { transform: scale(1.05); }
     </style>
 </head>
 <body class="font-sans bg-gray-100">
@@ -27,37 +29,72 @@
     <!-- Home Section -->
     <section id="home" class="active p-10 text-center">
         <img src="your-image-url.jpg" alt="Profile Picture" class="mx-auto w-32 h-32 rounded-full">
-        <h1 class="text-4xl font-bold mt-4">Muzammil Maseehuddin Ahmed</h1>
-        <p class="text-lg">Piping Designer with 1+ years of experience in the oil and gas industry</p>
+        <h1 class="text-4xl font-bold mt-4">Muzammil Ahmed</h1>
+        <p class="text-lg">Piping Designer | Mechanical Engineer | Open to Opportunities</p>
+        <p class="mt-4">Available for Full-time, Part-time, Freelance, and Contract Roles.</p>
         <a href="#" class="mt-4 inline-block bg-blue-600 text-white py-2 px-6 rounded" onclick="showSection('projects')">View My Projects</a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="hidden p-10">
         <h2 class="text-3xl font-bold">About Me</h2>
-        <p>BTech in Mechanical Engineering (2023), with a Diploma in Mechanical Engineering (2020), and over 1 year of professional experience.</p>
+        <p>BTech in Mechanical Engineering (2023) with a Diploma in Mechanical Engineering (2020). I am a dedicated professional with over 1 year of experience in the oil and gas sector.</p>
+        <h3 class="text-2xl font-semibold mt-4">Education</h3>
+        <ul class="list-disc pl-5">
+            <li>BTech in Mechanical Engineering, Sharnbasva University, 2023</li>
+            <li>Diploma in Mechanical Engineering, Dept. Of Technical Education, 2020</li>
+            <li>SSLC, Karnataka Secondary Education Board, 2017</li>
+        </ul>
+        <h3 class="text-2xl font-semibold mt-4">Mechanical Engineering Projects</h3>
+        <ul class="list-disc pl-5">
+            <li>Design and Simulation of a Mechanical System (University Project)</li>
+            <li>Analysis of Thermal Stress in Piping Systems</li>
+        </ul>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="hidden p-10">
         <h2 class="text-3xl font-bold">Experience</h2>
-        <ul class="list-disc pl-5">
-            <li>Working as Piping Designer at Petrocon Engineers since Dec 2023.</li>
-            <li>Familiar with PDS, SP3D, E3D, Isometric Drawings, and Piping Layouts.</li>
-            <li>Experience with projects under ADNOC client: Archirodon Project BAB485 and Wave C3B Onshore.</li>
-        </ul>
+        <div class="mt-4">
+            <h3 class="text-xl font-semibold">Piping Designer at Petrocon Engineers</h3>
+            <p class="italic">Dec 2023 - Present</p>
+            <ul class="list-disc pl-5">
+                <li>Worked on various projects for clients like ADNOC, focusing on efficient piping design.</li>
+                <li>Responsible for preparing Isometric Drawings and Piping Layouts.</li>
+                <li>Collaborated with engineering teams to resolve design conflicts and enhance project workflow.</li>
+                <li>Utilized software tools such as PDS, SP3D, and E3D for design and modeling.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="hidden p-10">
         <h2 class="text-3xl font-bold">Projects</h2>
-        <div>
-            <h3 class="text-xl font-semibold">Archirodon Project BAB485</h3>
-            <p>Client: ADNOC | Role: Piping Designer | Details: Isometric extraction and error resolution for a major onshore project.</p>
-        </div>
-        <div>
-            <h3 class="text-xl font-semibold">Wave C3B Onshore Project</h3>
-            <p>Client: ADNOC | Role: Piping Designer | Details: Planning and design of piping layouts for oil and gas infrastructure.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="card bg-white p-4 rounded shadow">
+                <h3 class="text-xl font-semibold">Archirodon Project BAB485</h3>
+                <img src="project-image-url-1.jpg" alt="Project Image" class="mt-2 rounded">
+                <p>Client: ADNOC</p>
+                <p>Role: Piping Designer</p>
+                <h4 class="font-semibold">Responsibilities:</h4>
+                <ul class="list-disc pl-5">
+                    <li>Executed isometric extraction and resolved extraction errors.</li>
+                    <li>Collaborated with the design team for layout preparation.</li>
+                    <li>Ensured compliance with industry standards and specifications.</li>
+                </ul>
+            </div>
+            <div class="card bg-white p-4 rounded shadow">
+                <h3 class="text-xl font-semibold">Wave C3B Onshore Project</h3>
+                <img src="project-image-url-2.jpg" alt="Project Image" class="mt-2 rounded">
+                <p>Client: ADNOC</p>
+                <p>Role: Piping Designer</p>
+                <h4 class="font-semibold">Responsibilities:</h4>
+                <ul class="list-disc pl-5">
+                    <li>Designed piping systems using advanced modeling software.</li>
+                    <li>Conducted field verification and design checks.</li>
+                    <li>Worked on optimizing design layouts for efficiency and cost-effectiveness.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -65,15 +102,22 @@
     <section id="skills" class="hidden p-10">
         <h2 class="text-3xl font-bold">Skills</h2>
         <ul class="list-disc pl-5">
-            <li>Technical: PDS, SP3D, E3D, AutoCAD, MS Office, SmartPlant 3D</li>
-            <li>Soft Skills: Communication, Teamwork, Leadership</li>
+            <li>Technical Skills: PDS, SP3D, E3D, AutoCAD, MS Office, SmartPlant 3D</li>
+            <li>Soft Skills: Communication, Teamwork, Leadership, Problem-solving</li>
         </ul>
     </section>
 
     <!-- Blog Section -->
     <section id="blog" class="hidden p-10">
         <h2 class="text-3xl font-bold">Blog</h2>
-        <p>Blog posts coming soon...</p>
+        <p>Check out my blog for articles on:</p>
+        <ul class="list-disc pl-5">
+            <li>AI and its applications in engineering</li>
+            <li>Resume writing tips and tricks</li>
+            <li>Prompt engineering best practices</li>
+            <li>Mechanical engineering insights and innovations</li>
+        </ul>
+        <p>Coming soon...</p>
     </section>
 
     <!-- Contact Section -->
@@ -86,8 +130,10 @@
             <button class="bg-blue-600 text-white py-2 px-4 rounded">Send</button>
         </form>
         <div class="mt-4">
+            <h3 class="text-lg font-semibold">Connect with me:</h3>
             <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a> |
+            <a href="https://twitter.com/your-profile" target="_blank">Twitter</a>
         </div>
     </section>
 
